@@ -84,17 +84,26 @@ namespace WPF_lab1
                 }
             }
 
-            Microsoft.Win32.OpenFileDialog dlg1 = new Microsoft.Win32.OpenFileDialog();
-            dlg1.Filter = "Text documents (.txt)|*.txt";
-            if (dlg1.ShowDialog() == true)
+            try
             {
-                string filename = dlg1.FileName;
-                if (coll != null)
+                Microsoft.Win32.OpenFileDialog dlg1 = new Microsoft.Win32.OpenFileDialog();
+                dlg1.Filter = "Text documents (.txt)|*.txt";
+                if (dlg1.ShowDialog() == true)
                 {
-                    coll.Load(filename);
-                }
+                    string filename = dlg1.FileName;
+                    if (coll != null)
+                    {
+                        coll.Load(filename);
+                        coll.Is_changed = false;
+                    }
 
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Некорректный файл");
+            }
+           
         }
 
         private void Button_Save_Click(object sender, RoutedEventArgs e)
@@ -208,7 +217,15 @@ namespace WPF_lab1
             V3MainCollection coll = TryFindResource("key_main_collection") as V3MainCollection;
             if (coll != null)
             {
-                coll.RemoveAt(lisBox_Main.SelectedIndex);
+                try
+                {
+                    coll.RemoveAt(lisBox_Main.SelectedIndex);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Сначала выберите элемент");
+                }
+               
             }
         }
 
