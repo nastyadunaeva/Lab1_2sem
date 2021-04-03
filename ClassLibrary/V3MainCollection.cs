@@ -265,10 +265,6 @@ namespace Lab3
                 this.v3Datas = res.v3Datas;
                 OnCollectionChanged(this, NotifyCollectionChangedAction.Reset);
             }
-            catch (Exception e)
-            {
-                Console.WriteLine("Load\n" + e.Message);
-            }
             finally
             {
                 if (fileStream != null)
