@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "cU7b+RzIj4syOLBUebJkk26dYFlujfVKUA7u43zjGlJ7Q71ic9izwMAK/pQx4/BdBsNi+1srM+iT9C7ddqiaxg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Nastya\\source\\repos\\Lab3\\ClassLibrary\\ClassLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nastya\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Nastya\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Nastya\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
